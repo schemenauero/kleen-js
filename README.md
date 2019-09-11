@@ -133,4 +133,8 @@ kleen.toSSN('a2b456') // returns '245-6'
 # Development
 PR's Welcome!
 
+Please update code, tests, README, bump the version number, and build the code
+
 `yarn test --watch` to run jest tests (and watch for future changes to those tests)
+
+`yarn build` to build the most recent code before posting PR
