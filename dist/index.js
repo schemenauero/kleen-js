@@ -25,6 +25,15 @@ exports.limitToLength = function (str, len) {
 exports.addStringAtPosition = function (str, addStr, position) {
   if (str.length < position) return str;
   return str.substring(0, position) + addStr + str.substring(position);
+}; // adds the given string at the position if the original string is of the given length
+// if the original string length is not as long as the given length, does nothing
+// with '123456789', '-', 5 returns '12345-6789'
+
+
+exports.addStringAtPositionIfLength = function (str, addStr, position, length) {
+  if (str.length < length) return str;
+  if (str.length < position) return str;
+  return str.substring(0, position) + addStr + str.substring(position);
 }; ///////////////////////////////////////////////////
 // Utility functions (built with core functions) //
 ///////////////////////////////////////////////////
@@ -57,8 +66,8 @@ exports.toSSN = function (str) {
   return (0, _lodash.flow)([exports.removeNonDigits, function (str) {
     return exports.limitToLength(str, 9);
   }, function (str) {
-    return exports.addStringAtPosition(str, '-', 3);
+    return exports.addStringAtPositionIfLength(str, '-', 3, 4);
   }, function (str) {
-    return exports.addStringAtPosition(str, '-', 6);
+    return exports.addStringAtPositionIfLength(str, '-', 6, 7);
   }])(str);
 };
