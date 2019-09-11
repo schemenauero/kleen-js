@@ -16,7 +16,7 @@ kleen.toSSN('123456789') // returns '123-45-6789'
 ```
 
 # Documentation
-Functions are split into two types: core and utilities. Core functions tranform strings in customizable ways. Utility functions are built with core functions and transform the strings in concrete ways.
+Functions are split into two types: core and utilities. Core functions transform strings in customizable ways. Utility functions are built with core functions and transform the strings in concrete ways.
 
 Core Functions
 
