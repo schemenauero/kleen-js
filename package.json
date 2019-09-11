@@ -1,7 +1,7 @@
 {
-  "name": "kleen",
+  "name": "kleen-js",
   "version": "1.0.0",
-  "description": "Readable, Vanilla JS, String Sanitizer",
+  "description": "Readable String Sanitizer",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel index.js -d dist",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/schemenauero/kleen.git"
+    "url": "git+https://github.com/schemenauero/kleen-js.git"
   },
   "keywords": [
     "sanitize",
@@ -19,9 +19,9 @@
   "author": "Orion Schemenauer",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/schemenauero/kleen/issues"
+    "url": "https://github.com/schemenauero/kleen-js/issues"
   },
-  "homepage": "https://github.com/schemenauero/kleen#readme",
+  "homepage": "https://github.com/schemenauero/kleen-js#readme",
   "dependencies": {
     "lodash": "^4.17.15"
   },
