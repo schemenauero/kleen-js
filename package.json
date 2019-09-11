@@ -1,6 +1,6 @@
 {
   "name": "kleen-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Readable String Sanitizer",
   "main": "dist/index.js",
   "scripts": {
