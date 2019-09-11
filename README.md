@@ -70,6 +70,7 @@ kleen.limitToLength('ab', 3) // returns 'ab'
 `addStringAtPosition(String, stringToAdd:String, position:Int)`
 
 adds the given string at the position
+
 if the original string length is not as long as the position, does nothing
 
 ```javascript
