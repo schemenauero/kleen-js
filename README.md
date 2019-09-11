@@ -1,2 +1,2 @@
 # Kleen
-Readable, Vanilla JS, String Sanitizer
+Readable String Sanitizer
