@@ -24,6 +24,7 @@ Core Functions
 - [removeNonDigits](#removeNonDigits)
 - [limitToLength](#limitToLength)
 - [addStringAtPosition](#addStringAtPosition)
+- [addStringAtPositionIfLength](#addStringAtPositionIfLength)
 
 Utility Functions
 - [toShortUSPostalCode](#toShortUSPostalCode)
@@ -77,6 +78,20 @@ kleen.addStringAtPosition('12345', '-', 5) // returns '12345-'
 kleen.addStringAtPosition('123', '-', 5) // returns '123'
 ```
 
+<a name="addStringAtPositionIfLength"></a>
+### Add String at Position If Length
+`addStringAtPositionIfLength(String, stringToAdd:String, position:Int, length:Int)`
+
+adds the given string at the position if the original string is of the given length
+if the original string length is not as long as the given length, does nothing
+if the original string length is not as long as the position, does nothing
+
+```javascript
+kleen.addStringAtPositionIfLength('123456789', '-', 5) // returns '12345-6789'
+kleen.addStringAtPositionIfLength('12345', '-', 5, 6) // returns '12345'
+kleen.addStringAtPositionIfLength('123', '-', 5, 6) // returns '123'
+```
+
 ## Utility Functions
 
 <a name="toShortUSPostalCode"></a>
@@ -116,4 +131,3 @@ kleen.toSSN('a2b456') // returns '245-6'
 PR's Welcome!
 
 `yarn test --watch` to run jest tests (and watch for future changes to those tests)
-
