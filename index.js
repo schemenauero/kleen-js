@@ -54,7 +54,7 @@ exports.toLongUSPostalCode = str =>
   flow([
     exports.removeNonDigits,
     str => exports.limitToLength(str, 9),
-    str => exports.addStringAtPosition(str, '-', 5),
+    str => exports.addStringAtPositionIfLength(str, '-', 5, 6),
   ])(str)
 
 // formats the string to a US SSN

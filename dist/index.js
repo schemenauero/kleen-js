@@ -55,7 +55,7 @@ exports.toLongUSPostalCode = function (str) {
   return (0, _lodash.flow)([exports.removeNonDigits, function (str) {
     return exports.limitToLength(str, 9);
   }, function (str) {
-    return exports.addStringAtPosition(str, '-', 5);
+    return exports.addStringAtPositionIfLength(str, '-', 5, 6);
   }])(str);
 }; // formats the string to a US SSN
 // with '123456789' returns '123-45-6789'
