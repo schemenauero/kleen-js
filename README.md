@@ -84,7 +84,9 @@ kleen.addStringAtPosition('123', '-', 5) // returns '123'
 `addStringAtPositionIfLength(String, stringToAdd:String, position:Int, length:Int)`
 
 adds the given string at the position if the original string is of the given length
+
 if the original string length is not as long as the given length, does nothing
+
 if the original string length is not as long as the position, does nothing
 
 ```javascript
