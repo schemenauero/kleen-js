@@ -19,6 +19,7 @@ describe('utility functions', () => {
     expect(kleen.toSSN('1234')).toEqual('123-4')
     expect(kleen.toSSN('123-45')).toEqual('123-45')
     expect(kleen.toSSN('123-456')).toEqual('123-45-6')
+    expect(kleen.toSSN('123-')).toEqual('123')
     expect(kleen.toSSN('123')).toEqual('123')
     expect(kleen.toSSN('12')).toEqual('12')
     expect(kleen.toSSN('abc')).toEqual('')
