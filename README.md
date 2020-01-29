@@ -71,6 +71,7 @@ kleen.limitToLength('ab', 3) // returns 'ab'
 `addStringAtPosition(String, stringToAdd:String, position:Int)`
 
 adds the given string at the position
+
 if the original string length is not as long as the position, does nothing
 
 ```javascript
@@ -84,7 +85,9 @@ kleen.addStringAtPosition('123', '-', 5) // returns '123'
 `addStringAtPositionIfLength(String, stringToAdd:String, position:Int, length:Int)`
 
 adds the given string at the position if the original string is of the given length
+
 if the original string length is not as long as the given length, does nothing
+
 if the original string length is not as long as the position, does nothing
 
 ```javascript
@@ -142,4 +145,8 @@ kleen.toPhone('a2b456') // returns '245 6'
 # Development
 PR's Welcome!
 
+Please update code, tests, README, bump the version number, and build the code
+
 `yarn test --watch` to run jest tests (and watch for future changes to those tests)
+
+`yarn build` to build the most recent code before posting PR
