@@ -138,8 +138,8 @@ kleen.toSSN('a2b456') // returns '245-6'
 formats the string to a US Phone Number
 
 ```javascript
-kleen.toPhone('1234567890') // returns '123 456-7890'
-kleen.toPhone('a2b456') // returns '245 6'
+kleen.toPhone('1234567890') // returns '(123) 456-7890'
+kleen.toPhone('a2b456') // returns '(245) 6'
 ```
 
 # Development

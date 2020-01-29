@@ -76,16 +76,20 @@ exports.toSSN = function (str) {
     return exports.addStringAtPositionIfLength(str, '-', 6, 7);
   }])(str);
 }; // formats the string to a US Phone Number
-// with '1234567890' returns '123 456-7890'
-// with 'a2b456' returns '245 6'
+// with '1234567890' returns '(123) 456-7890'
+// with 'a2b456' returns '(245) 6'
 
 
 exports.toPhone = function (str) {
   return (0, _lodash.flow)([exports.removeNonDigits, function (str) {
     return exports.limitToLength(str, 10);
   }, function (str) {
-    return exports.addStringAtPositionIfLength(str, ' ', 3, 4);
+    return exports.addStringAtPositionIfLength(str, '(', 0, 1);
   }, function (str) {
-    return exports.addStringAtPositionIfLength(str, '-', 7, 8);
+    return exports.addStringAtPositionIfLength(str, ')', 4, 5);
+  }, function (str) {
+    return exports.addStringAtPositionIfLength(str, ' ', 5, 6);
+  }, function (str) {
+    return exports.addStringAtPositionIfLength(str, '-', 9, 10);
   }])(str);
 };
