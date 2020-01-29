@@ -67,3 +67,14 @@ exports.toSSN = str =>
     str => exports.addStringAtPositionIfLength(str, '-', 3, 4),
     str => exports.addStringAtPositionIfLength(str, '-', 6, 7),
   ])(str)
+
+// formats the string to a US Phone Number
+// with '1234567890' returns '123 456-7890'
+// with 'a2b456' returns '245 6'
+exports.toPhone = str =>
+  flow([
+    exports.removeNonDigits,
+    str => exports.limitToLength(str, 10),
+    str => exports.addStringAtPositionIfLength(str, ' ', 3, 4),
+    str => exports.addStringAtPositionIfLength(str, '-', 7, 8),
+  ])(str)

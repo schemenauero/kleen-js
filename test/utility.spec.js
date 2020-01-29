@@ -29,4 +29,16 @@ describe('utility functions', () => {
     expect(kleen.toSSN('abc')).toEqual('')
   })
 
+  test('toPhone', () => {
+    expect(kleen.toPhone('123 456-7890')).toEqual('123 456-7890')
+    expect(kleen.toPhone('1234567890')).toEqual('123 456-7890')
+    expect(kleen.toPhone('1234hbjsadfasd567890')).toEqual('123 456-7890')
+    expect(kleen.toPhone('12')).toEqual('12')
+    expect(kleen.toPhone('123')).toEqual('123')
+    expect(kleen.toPhone('1234')).toEqual('123 4')
+    expect(kleen.toPhone('123 45')).toEqual('123 45')
+    expect(kleen.toPhone('123 456')).toEqual('123 456')
+    expect(kleen.toPhone('1234567')).toEqual('123 456-7')
+  })
+
 })

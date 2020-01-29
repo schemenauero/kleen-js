@@ -30,6 +30,7 @@ Utility Functions
 - [toShortUSPostalCode](#toShortUSPostalCode)
 - [toLongUSPostalCode](#toLongUSPostalCode)
 - [toSSN](#toSSN)
+- [toPhone](#toPhone)
 
 
 ## Core Functions
@@ -125,6 +126,17 @@ formats the string to a US SSN
 ```javascript
 kleen.toSSN('123456789') // returns '123-45-6789'
 kleen.toSSN('a2b456') // returns '245-6'
+```
+
+<a name="toPhone"></a>
+### To Phone
+`toPhone(String)`
+
+formats the string to a US Phone Number
+
+```javascript
+kleen.toPhone('1234567890') // returns '123 456-7890'
+kleen.toPhone('a2b456') // returns '245 6'
 ```
 
 # Development

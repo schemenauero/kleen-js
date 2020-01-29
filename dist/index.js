@@ -2,6 +2,11 @@
 
 var _lodash = require("lodash");
 
+////////////////////
+// Core functions //
+////////////////////
+// removes any of the found regex
+// with 'abc123', /\d/g returns 'abc'
 exports.removeByRegex = function (str, regex) {
   return str.replace(regex, '');
 }; // remove all non-digit characters (anything except 0-9)
@@ -69,5 +74,18 @@ exports.toSSN = function (str) {
     return exports.addStringAtPositionIfLength(str, '-', 3, 4);
   }, function (str) {
     return exports.addStringAtPositionIfLength(str, '-', 6, 7);
+  }])(str);
+}; // formats the string to a US Phone Number
+// with '1234567890' returns '123 456-7890'
+// with 'a2b456' returns '245 6'
+
+
+exports.toPhone = function (str) {
+  return (0, _lodash.flow)([exports.removeNonDigits, function (str) {
+    return exports.limitToLength(str, 10);
+  }, function (str) {
+    return exports.addStringAtPositionIfLength(str, ' ', 3, 4);
+  }, function (str) {
+    return exports.addStringAtPositionIfLength(str, '-', 7, 8);
   }])(str);
 };

@@ -1,6 +1,6 @@
 {
   "name": "kleen-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Readable String Sanitizer",
   "main": "dist/index.js",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.0",
     "jest": "^24.9.0"
