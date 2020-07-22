@@ -145,8 +145,6 @@ kleen.toPhone('a2b456') // returns '(245) 6'
 # Development
 PR's Welcome!
 
-Please update code, tests, README, and bump the version number. I'll handle rebuilding the code and `npm publish`'ing after the PR is in.
+Please update code, tests, README, and bump the version number. I'll handle `yarn build`'ing and `npm publish`'ing after the PR is in.
 
 `yarn test --watch` to run jest tests (and watch for future changes to those tests)
-
-`yarn build` to build the most recent code before posting PR
