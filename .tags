@@ -8,22 +8,12 @@
 @babel/core	package.json	/^    "@babel\/core": "^7.6.0",$/;"	f
 @babel/plugin-proposal-class-properties	package.json	/^    "@babel\/plugin-proposal-class-properties": "^7.5.5",$/;"	f
 @babel/preset-env	package.json	/^    "@babel\/preset-env": "^7.6.0",$/;"	f
-_lodash	dist/index.js	/^var _lodash = require("lodash");$/;"	v
 author	package.json	/^  "author": "Orion Schemenauer",$/;"	f
 bugs	package.json	/^  "bugs": {$/;"	f
 build	package.json	/^    "build": "babel index.js -d dist",$/;"	f
 dependencies	package.json	/^  "dependencies": {$/;"	f
 description	package.json	/^  "description": "Readable String Sanitizer",$/;"	f
 devDependencies	package.json	/^  "devDependencies": {$/;"	f
-exports.addStringAtPosition	dist/index.js	/^}; \/\/ adds the given string at the position$/;"	f
-exports.addStringAtPositionIfLength	dist/index.js	/^}; \/\/ adds the given string at the position if the original string is of the given length$/;"	f
-exports.limitToLength	dist/index.js	/^}; \/\/ limits the string to the given length$/;"	f
-exports.removeByRegex	dist/index.js	/^var _lodash = require("lodash");$/;"	f
-exports.removeNonDigits	dist/index.js	/^}; \/\/ remove all non-digit characters (anything except 0-9)$/;"	f
-exports.toLongUSPostalCode	dist/index.js	/^}; \/\/ formats the string to as close to a 5-4 digit postal code as possible$/;"	f
-exports.toPhone	dist/index.js	/^}; \/\/ formats the string to a US Phone Number$/;"	f
-exports.toSSN	dist/index.js	/^}; \/\/ formats the string to a US SSN$/;"	f
-exports.toShortUSPostalCode	dist/index.js	/^}; \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/$/;"	f
 homepage	package.json	/^  "homepage": "https:\/\/github.com\/schemenauero\/kleen-js#readme",$/;"	f
 jest	package.json	/^    "jest": "^24.9.0"$/;"	f
 keywords	package.json	/^  "keywords": [$/;"	f
@@ -37,4 +27,4 @@ test	package.json	/^    "test": "jest"$/;"	f
 type	package.json	/^    "type": "git",$/;"	f
 url	package.json	/^    "url": "git+https:\/\/github.com\/schemenauero\/kleen-js.git"$/;"	f
 url	package.json	/^    "url": "https:\/\/github.com\/schemenauero\/kleen-js\/issues"$/;"	f
-version	package.json	/^  "version": "1.0.7",$/;"	f
+version	package.json	/^  "version": "1.0.8",$/;"	f
