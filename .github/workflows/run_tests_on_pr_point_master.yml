@@ -1,0 +1,17 @@
+# Runs tests when pr's point at master
+
+name: CI
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install NPM Packages
+      run: npm install
+    - name: Run Tests
+      run: npm test
