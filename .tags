@@ -37,4 +37,4 @@ test	package.json	/^    "test": "jest"$/;"	f
 type	package.json	/^    "type": "git",$/;"	f
 url	package.json	/^    "url": "git+https:\/\/github.com\/schemenauero\/kleen-js.git"$/;"	f
 url	package.json	/^    "url": "https:\/\/github.com\/schemenauero\/kleen-js\/issues"$/;"	f
-version	package.json	/^  "version": "1.0.6",$/;"	f
+version	package.json	/^  "version": "1.0.7",$/;"	f
