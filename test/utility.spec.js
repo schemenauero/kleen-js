@@ -44,7 +44,7 @@ describe('utility functions', () => {
 
   test('toUKPhone', () => {
     expect(kleen.toUKPhone('')).toEqual('')
-    expect(kleen.toUKPhone('12345 78901')).toEqual('12345 678901')
+    expect(kleen.toUKPhone('12345 678901')).toEqual('12345 678901')
     expect(kleen.toUKPhone('12345678901')).toEqual('12345 678901')
     expect(kleen.toUKPhone('1234hbjsadfasd567890')).toEqual('12345 67890')
     expect(kleen.toUKPhone('1')).toEqual('(1')
