@@ -1,7 +1,6 @@
 import kleen from '../index.js'
 
 describe('utility functions', () => {
-
   test('toShortUSPostalCode', () => {
     expect(kleen.toShortUSPostalCode('abc123')).toEqual('123')
     expect(kleen.toShortUSPostalCode('123456-789')).toEqual('12345')
@@ -29,7 +28,7 @@ describe('utility functions', () => {
     expect(kleen.toSSN('abc')).toEqual('')
   })
 
-  test('toPhone', () => {
+  test('toUSPhone', () => {
     expect(kleen.toPhone('')).toEqual('')
     expect(kleen.toPhone('123 456-7890')).toEqual('(123) 456-7890')
     expect(kleen.toPhone('1234567890')).toEqual('(123) 456-7890')
@@ -41,6 +40,20 @@ describe('utility functions', () => {
     expect(kleen.toPhone('123 45')).toEqual('(123) 45')
     expect(kleen.toPhone('123 456')).toEqual('(123) 456')
     expect(kleen.toPhone('1234567')).toEqual('(123) 456-7')
+  })
+
+  test('toUKPhone', () => {
+    expect(kleen.toPhone('')).toEqual('')
+    expect(kleen.toPhone('12345 78901')).toEqual('12345 678901')
+    expect(kleen.toPhone('12345678901')).toEqual('12345 678901')
+    expect(kleen.toPhone('1234hbjsadfasd567890')).toEqual('12345 67890')
+    expect(kleen.toPhone('1')).toEqual('(1')
+    expect(kleen.toPhone('12')).toEqual('12')
+    expect(kleen.toPhone('123')).toEqual('123')
+    expect(kleen.toPhone('1234')).toEqual('1234')
+    expect(kleen.toPhone('12345')).toEqual('12345')
+    expect(kleen.toPhone('123456')).toEqual('12345 6')
+    expect(kleen.toPhone('1234567')).toEqual('12345 67')
   })
 
 })

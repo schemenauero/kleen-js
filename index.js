@@ -71,7 +71,7 @@ exports.toSSN = str =>
 // formats the string to a US Phone Number
 // with '1234567890' returns '(123) 456-7890'
 // with 'a2b456' returns '(245) 6'
-exports.toPhone = str =>
+exports.toUSPhone = str =>
   flow([
     exports.removeNonDigits,
     str => exports.limitToLength(str, 10),
@@ -80,3 +80,14 @@ exports.toPhone = str =>
     str => exports.addStringAtPositionIfLength(str, ' ', 5, 6),
     str => exports.addStringAtPositionIfLength(str, '-', 9, 10),
   ])(str)
+
+// formats the string to a UK Phone Number
+// with '01234567890' returns '01234 567890'
+// with 'a2b456' returns '2456'
+exports.toUKPhone = str =>
+  flow([
+    exports.removeNonDigits,
+    str => exports.limitToLength(str, 12),
+    str => exports.addStringAtPositionIfLength(str, ' ', 5, 6),
+  ])(str)
+

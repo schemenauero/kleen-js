@@ -1,7 +1,6 @@
 import kleen from '../index.js'
 
 describe('core functions', () => {
-
   test('removeByRegex', () => {
     expect(kleen.removeByRegex('abc123', /\d/g)).toEqual('abc')
   })
