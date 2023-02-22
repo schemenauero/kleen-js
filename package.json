@@ -17,7 +17,7 @@
     "vanilla"
   ],
   "author": "Orion Schemenauer",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/schemenauero/kleen-js/issues"
   },
